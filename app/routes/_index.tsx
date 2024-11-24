@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import NavBar from "./navbar";
+import { BeatTileList } from "./beat";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,18 +10,9 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-      <BeatTile></BeatTile>
-
+    <>
+      <NavBar></NavBar>
+      <BeatTileList></BeatTileList>
+    </>
   );
 }
-
-export function BeatTile() {
-  return (
-    <div className="container mx-auto bg-violet-200 rounded-lg">
-      <p>BeatTile works!</p>
-    </div>
-  );
-}
-
-const resources = [
-];
