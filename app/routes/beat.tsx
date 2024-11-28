@@ -23,8 +23,13 @@ export function BeatTile({ beatID }: any) {
 
     return (
         beat?(
-            <div className="container mx-auto bg-violet-200 rounded-lg px-10 w-screen h-8">
-                <p>{beat.title}</p> <p>{beat.datePublished.toDateString()}</p>
+            <div className="container mx-auto bg-violet-400 rounded-lg px-10 w-2/3 h-auto m-0.5
+            hover:bg-violet-600">
+                <p className="font-mono">{beat.title}</p> 
+                <audio controls className="bg-violet-400 hover:bg-violet-600 w-full h-10"></audio>
+                <p className="font-mono">{beat.datePublished.toLocaleString()}</p>
+
+
             </div>
         ): <div></div>
     );
